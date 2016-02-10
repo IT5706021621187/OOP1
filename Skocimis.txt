@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Skocimis {
+	public static void main(String[] args) {
+		int n1=0, n2=0, n3=0;
+		int count = 0 ;
+		Scanner scan = new Scanner(System.in);
+		
+			System.out.print("Enter 3 integer  : ");
+			n1 = scan.nextInt();
+			n2 = scan.nextInt();
+			n3 = scan.nextInt();
+			if (n1 <= 0 || n1 >= 100) {
+				System.out.println("ERROR.  Please enter again");
+				count = 1;
+			} else if (n2 <= 0 || n2 >= 100) {
+				System.out.println("ERROR. Please enter again");
+				count = 1;
+			} else if (n3 <= 0 || n3 >= 100) {
+				System.out.println("ERROR. Please enter again");
+				count = 1;
+			} else if (n2 <= n1) {
+				System.out.println("Number2 must more than Number1. Please enter again!!!");
+				count = 1;
+			} else if (n3 <= n2) {
+				System.out.println("Number3 must more than Number2. Please enter again!!!");
+				count = 1;
+			}
+		if(count == 0){
+		System.out.println("------- Output -------- ");
+		System.out.println(" Most played : " + ((n3 - n2) - 1) + " time.");
+	}
+}
+}	
